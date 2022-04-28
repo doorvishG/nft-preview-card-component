@@ -1,0 +1,118 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Primary colors*/
+$soft-blue:hsl(215, 51%, 70%);
+$cyan:hsl(178, 100%, 50%);
+
+
+/* neutral colors */
+$main-bg:hsl(217, 54%, 11%);
+$card-bg:hsl(216, 50%, 16%);
+$line:hsl(215, 32%, 27%);
+
+/* Font */
+$font: 'Outfit', sans-serif;
+
+/* Font size */
+$font-size: 1.1rem;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $main-bg;
+}
+
+.card{
+    margin: 0 auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    background-color: $card-bg;
+    border-radius: 15px;
+    border: 2px solid red;
+
+    img{
+        padding-top: 1.8em;
+        padding-bottom: 1.3em;
+        width: 80%;
+    }
+
+    h1{
+        font-family: $font;
+        font-size: 1.5rem;
+        color: #fff;
+        margin-left: -3em;
+        padding-bottom: 0.8em;
+
+        &:hover{
+            color: $cyan;
+        }
+    }
+
+    p{
+        font-family: $font;
+        font-size: $font-size;
+        color: $soft-blue;
+        margin-left: 2em;
+        padding-bottom: 1em;
+    }
+
+    .details{
+        display: inline-flex;
+        // margin-left: em;
+        // border: 2px solid blue;
+        justify-content: space-around;
+        gap: 50px;
+        width: 83%;
+        .price{
+            display: inline-flex;
+            width: 40%;
+            // border: 2px solid purple;
+            // gap: 9px;
+            #eth{
+                margin-top: 0.2em;
+            }
+
+            h2{
+                padding-left: 5px;
+                font-family: $font;
+                color: $cyan;
+                font-size: $font-size;
+                width: 100%;
+            }
+        }
+
+        .days{
+            display: inline-flex;
+            width: 38%;
+            // border: 2px solid yellow;
+            text-align: right;
+            #clock{
+                margin-top: 0.2em;
+                align-items: flex-end;
+            }
+
+            #numdays{
+                width: 100%;
+                margin-left: 0;
+                padding-left: 5px;
+                padding-bottom: 0;
+            }
+           
+        }
+    }
+
+    .line{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
