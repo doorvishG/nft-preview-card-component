@@ -9,7 +9,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://doorvish-gujoo-nft-preview-card.vercel.app/)
+- Live Site URL: [https://doorvish-gujoo-nft-preview-card.vercel.app/](https://doorvish-gujoo-nft-preview-card.vercel.app/)
 
 ## My process
 
