@@ -32,20 +32,58 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 350px;
+  height: 75vh;
   background-color: #14253d;
   border-radius: 15px;
   border: 2px solid red;
 }
 
-.card img {
-  padding-top: 1.8em;
-  padding-bottom: 1.3em;
+.card .container {
+  position: relative;
   width: 80%;
+  padding-bottom: 1.3em;
+}
+
+.card .container .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card .container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00fff7;
+  width: 100%;
+  height: 93%;
+  -webkit-transition: 0.3 ease;
+  transition: 0.3 ease;
+  opacity: 0;
+  text-align: center;
+}
+
+.card .container .overlay #icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card .container .overlay:hover.overlay {
+  opacity: 0.5;
 }
 
 .card h1 {
   font-family: "Outfit", sans-serif;
   font-size: 1.5rem;
+  font-weight: 600;
   color: #fff;
   margin-left: -3em;
   padding-bottom: 0.8em;
@@ -58,6 +96,7 @@ body {
 .card p {
   font-family: "Outfit", sans-serif;
   font-size: 1.1rem;
+  font-weight: 300;
   color: #8bacda;
   margin-left: 2em;
   padding-bottom: 1em;
@@ -87,6 +126,7 @@ body {
 .card .details .price h2 {
   padding-left: 5px;
   font-family: "Outfit", sans-serif;
+  font-weight: 400;
   color: #00fff7;
   font-size: 1.1rem;
   width: 100%;
@@ -96,15 +136,13 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 38%;
+  gap: 2px;
+  width: 36%;
   text-align: right;
 }
 
 .card .details .days #clock {
   margin-top: 0.2em;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .card .details .days #numdays {
@@ -117,5 +155,48 @@ body {
 .card .line {
   padding-top: 1em;
   padding-bottom: 1em;
+  width: 80%;
+}
+
+.card .line hr.divide {
+  border-top: 2px solid #2f415b;
+}
+
+.card .info {
+  padding-top: 0.2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 80%;
+  gap: 10px;
+}
+
+.card .info img#avatar {
+  padding: 0;
+  max-width: 10%;
+  margin-top: 0em;
+}
+
+.card .info .create {
+  margin-left: 0;
+  margin-top: 0.2em;
+  padding: 0;
+}
+
+.card .info .create .name {
+  color: #fff;
+}
+
+.card .info .create .name:hover {
+  color: #00fff7;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 85vh;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
